@@ -141,9 +141,9 @@ clang-format:
     - ./scripts/clang-format-all.sh
     # check if any files are now modified and error if yes
     - (if [ -n "`git diff --name-only --diff-filter=M --ignore-submodules`" ]; then echo $'\n    Some files are not properly formatted. You can use "./scripts/clang-format-all.sh".\n'; git diff --diff-filter=M; false; fi)
-    - ls /data/
-    - ls /data/euroc/
     - mount
+    - ls /data
+    - ls /data/euroc/
 
 bionic-test:
   <<: *test_deb_definition
